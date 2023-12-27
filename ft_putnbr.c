@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbrahimi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/25 13:11:04 by hbrahimi          #+#    #+#             */
-/*   Updated: 2023/12/25 13:26:55 by hbrahimi         ###   ########.fr       */
+/*   Created: 2023/12/27 17:48:01 by hbrahimi          #+#    #+#             */
+/*   Updated: 2023/12/27 17:48:11 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,16 @@ int	ft_putnbr(int n)
 		count += ft_putstr("-2147483648");
 	else if(n < 0)
 	{
+		count += ft_putchar('-');
 		n = -n;
-		ft_putnbr(n);
+		count +=ft_putnbr(n);
 	}
 	else if (n > 9)
 	{
-	    ft_putnbr(n / 10);
-		ft_putchar(n % 10 + '0');
+	    count += ft_putnbr(n / 10);
+		count += ft_putchar(n % 10 + '0');
 	}
 	else
-		count += ft_putchar(n % 10 + '0');
+		count = ft_putchar(n % 10 + '0');
 	return (count);
-}
-#include <stdio.h>
-
-int main()
-{
-	int x = ft_putnbr(123);
-	printf("%d\n", x);
 }

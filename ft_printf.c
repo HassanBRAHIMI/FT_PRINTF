@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbrahimi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/25 11:54:46 by hbrahimi          #+#    #+#             */
-/*   Updated: 2023/12/25 13:27:47 by hbrahimi         ###   ########.fr       */
+/*   Created: 2023/12/27 17:43:14 by hbrahimi          #+#    #+#             */
+/*   Updated: 2023/12/27 18:03:55 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,26 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == 's')
 		{
 			count += ft_putstr(va_arg(args, char *));
+			i++;
+		}
+		if (format[i] == 'i' || format[i] == 'd')
+		{
+			count += ft_putnbr(va_arg(args, int));
+			i++;
+		}
+		if (format[i] == 'u')
+		{
+			count += ft_putunsigned(va_arg(args, unsigned int));
+			i++;
+		}
+		if (format[i] == '%')
+		{
+			count += ft_putstr("%%");
+			i++;
+		}
+		else
+		{
+			ft_putchar(format[i]);
 			i++;
 		}
 		i++;
