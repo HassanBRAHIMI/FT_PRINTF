@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_putlhexa.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/27 17:45:45 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/01/01 15:08:28 by hbrahimi         ###   ########.fr       */
+/*   Created: 2024/01/01 10:20:29 by hbrahimi          #+#    #+#             */
+/*   Updated: 2024/01/01 14:43:31 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-#define PRINTF_H
+#include "printf.h"
 
-#include <unistd.h>
-#include <stdarg.h>
-int	ft_putchar(char c);
-int	ft_putstr(char *str);
-int	ft_putnbr(int n);
-int	ft_printf(const char *format, ...);
-int ft_putunsigned(unsigned int u);
-int ft_putuhexa(unsigned int i);
-int	ft_putlhexa(unsigned int i);
-int ft_putadress(unsigned long n);
+int	ft_putlhexa(unsigned int i)
+{
+	char *lowercase = "0123456789abcdef";
+	int count;
 
-#endif
+	count = 0;
+	if (i < 16)
+		count += ft_putchar(lowercase[i]);
+	else
+	{
+		count += ft_putlhexa(i / 16);
+		count += ft_putchar(lowercase[(i % 16)]);
+	}
+	return (count);
+}

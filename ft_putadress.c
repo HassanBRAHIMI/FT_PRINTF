@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_putadress.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/27 17:45:45 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/01/01 15:08:28 by hbrahimi         ###   ########.fr       */
+/*   Created: 2024/01/01 12:34:59 by hbrahimi          #+#    #+#             */
+/*   Updated: 2024/01/01 14:59:21 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-#define PRINTF_H
+#include "printf.h"
 
-#include <unistd.h>
-#include <stdarg.h>
-int	ft_putchar(char c);
-int	ft_putstr(char *str);
-int	ft_putnbr(int n);
-int	ft_printf(const char *format, ...);
-int ft_putunsigned(unsigned int u);
-int ft_putuhexa(unsigned int i);
-int	ft_putlhexa(unsigned int i);
-int ft_putadress(unsigned long n);
+int ft_putadress(unsigned long n)
+{
+	int count;
+	char *hexa = "0123456789abcdef";
 
-#endif
+	count = 0;
+	if (!n)
+		count += ft_putstr("0x00");
+	else if (n < 16)
+		count += ft_putchar(hexa[n]);
+	else
+	{
+		count += ft_putadress(n / 16);
+		count += ft_putchar(hexa[(n % 16)]);
+	}
+	return (count);
+}
+

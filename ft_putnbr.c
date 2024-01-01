@@ -6,7 +6,7 @@
 /*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:48:01 by hbrahimi          #+#    #+#             */
-/*   Updated: 2023/12/27 17:48:11 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/01/01 10:53:56 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_putnbr(int n)
 	{
 		count += ft_putchar('-');
 		n = -n;
-		count +=ft_putnbr(n);
+		count += ft_putnbr(n);
 	}
 	else if (n > 9)
 	{
@@ -31,6 +31,6 @@ int	ft_putnbr(int n)
 		count += ft_putchar(n % 10 + '0');
 	}
 	else
-		count = ft_putchar(n % 10 + '0');
+		count += ft_putchar(n % 10 + '0');
 	return (count);
 }
