@@ -20,7 +20,7 @@ int ft_putunsigned(unsigned int u)
 	if (u > 9)
 	{
 		count += ft_putunsigned(u / 10);
-		count += ft_putunsigned(u % 10 + '0');
+		count += ft_putchar(u % 10 + '0');
 	}
 	else
 		count += ft_putchar(u % 10 + '0');
