@@ -6,7 +6,7 @@
 /*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:43:14 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/01/02 19:35:19 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/01/02 20:55:17 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int	ft_printf(const char *format, ...)
 	int		i;
 	int		count;
 
+	if (write(1, "", 0) == -1)
+		return (-1);
 	i = 0;
 	count = 0;
 	va_start (args, format);

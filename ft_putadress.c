@@ -6,7 +6,7 @@
 /*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 12:34:59 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/01/02 19:03:05 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/01/02 20:45:12 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_putadress(unsigned long n)
 	hexa = "0123456789abcdef";
 	count = 0;
 	if (!n)
-		count += ft_putstr("00");
+		count += ft_putstr("0");
 	else if (n < 16)
 		count += ft_putchar(hexa[n]);
 	else

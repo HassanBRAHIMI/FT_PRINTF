@@ -6,7 +6,7 @@
 /*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:44:56 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/01/02 19:59:26 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/01/02 20:40:31 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_putstr(char *str)
 	i = 0;
 	count = 0;
 	if (!str)
-		return (write(1, "(null)", 5));
+		return (write(1, "(null)", 6));
 	while (str[i])
 	{
 		count += ft_putchar(str[i]);
