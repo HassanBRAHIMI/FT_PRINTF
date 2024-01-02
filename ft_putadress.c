@@ -12,11 +12,12 @@
 
 #include "printf.h"
 
-int ft_putadress(unsigned long n)
+int	ft_putadress(unsigned long n)
 {
-	int count;
-	char *hexa = "0123456789abcdef";
+	int		count;
+	char	*hexa;
 
+	hexa = "0123456789abcdef";
 	count = 0;
 	if (!n)
 		count += ft_putstr("00");
@@ -29,4 +30,3 @@ int ft_putadress(unsigned long n)
 	}
 	return (count);
 }
-

@@ -12,9 +12,9 @@
 
 #include "printf.h"
 
-int ft_putunsigned(unsigned int u)
+int	ft_putunsigned(unsigned int u)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (u > 9)

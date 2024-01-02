@@ -12,11 +12,12 @@
 
 #include "printf.h"
 
-int ft_putuhexa(unsigned int i)
+int	ft_putuhexa(unsigned int i)
 {
-	char *uppercase = "0123456789ABCDEF";
-	int count;
+	char	*uppercase;
+	int		count;
 
+	uppercase = "0123456789ABCDEF";
 	count = 0;
 	if (i < 16)
 		count += ft_putchar(uppercase[i]);

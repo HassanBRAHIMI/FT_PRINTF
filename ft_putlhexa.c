@@ -14,9 +14,10 @@
 
 int	ft_putlhexa(unsigned int i)
 {
-	char *lowercase = "0123456789abcdef";
-	int count;
+	char	*lowercase;
+	int		count;
 
+	lowercase = "0123456789abcdef";
 	count = 0;
 	if (i < 16)
 		count += ft_putchar(lowercase[i]);

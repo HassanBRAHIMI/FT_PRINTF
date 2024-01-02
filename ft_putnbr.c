@@ -14,12 +14,12 @@
 
 int	ft_putnbr(int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (n == -2147483648)
 		count += ft_putstr("-2147483648");
-	else if(n < 0)
+	else if (n < 0)
 	{
 		count += ft_putchar('-');
 		n = -n;
@@ -27,7 +27,7 @@ int	ft_putnbr(int n)
 	}
 	else if (n > 9)
 	{
-	    count += ft_putnbr(n / 10);
+		count += ft_putnbr(n / 10);
 		count += ft_putchar(n % 10 + '0');
 	}
 	else

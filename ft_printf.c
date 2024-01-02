@@ -15,7 +15,7 @@
 int	ft_format(va_list args, char specifier)
 {
 	int	count;
-	
+
 	count = 0;
 	if (specifier == 'c')
 		count += ft_putchar(va_arg(args, int));
@@ -38,18 +38,18 @@ int	ft_format(va_list args, char specifier)
 	}
 	return (count);
 }
+
 int	ft_printf(const char *format, ...)
 {
-	va_list args;
-	int i;
-	int count;
+	va_list	args;
+	int		i;
+	int		count;
 
 	i = 0;
 	count = 0;
 	va_start (args, format);
-	while(format[i])
+	while (format[i])
 	{
-
 		if (format[i] == '%' && format[i + 1])
 		{
 			ft_format(args, format[i + 1]);
@@ -62,9 +62,8 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-int ft_printf(const char *format, ...);
 
-int main() {
+/*int main() {
     char c = 'A';
     char *str = "Hello, World!";
     int integer = 123;
@@ -81,4 +80,4 @@ int main() {
     ft_printf("Address: %p\n", (void *)pointerValue);
 
     return 0;
-}
+}*/
