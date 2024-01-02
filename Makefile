@@ -9,7 +9,7 @@ SRCS = ft_printf.c \
 
 OBJS = $(SRCS:.c=.o)
 
-HEADER = pritnf.h
+HEADER = ft_printf.h
 
 ARCHIVE = ar rcs
 

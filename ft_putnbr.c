@@ -6,11 +6,11 @@
 /*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:48:01 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/01/01 10:53:56 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/01/02 19:03:54 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(int n)
 {

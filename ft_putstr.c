@@ -6,21 +6,21 @@
 /*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:44:56 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/01/02 18:58:27 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/01/02 19:59:26 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *str)
 {
 	int	i;
 	int	count;
 
-	if (!str)
-		return (0);
 	i = 0;
 	count = 0;
+	if (!str)
+		return (write(1, "(null)", 5));
 	while (str[i])
 	{
 		count += ft_putchar(str[i]);

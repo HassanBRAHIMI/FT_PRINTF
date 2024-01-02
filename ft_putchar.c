@@ -6,11 +6,11 @@
 /*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:43:47 by hbrahimi          #+#    #+#             */
-/*   Updated: 2023/12/27 17:43:56 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/01/02 19:03:21 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {

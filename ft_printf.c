@@ -6,11 +6,11 @@
 /*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:43:14 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/01/01 15:29:42 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/01/02 19:35:19 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_format(va_list args, char specifier)
 {
@@ -26,7 +26,7 @@ int	ft_format(va_list args, char specifier)
 	else if (specifier == 'u')
 		count += ft_putunsigned(va_arg(args, unsigned int));
 	else if (specifier == '%')
-		count += ft_putstr("%%");
+		count += ft_putchar('%');
 	else if (specifier == 'x')
 		count += ft_putlhexa(va_arg(args, unsigned int));
 	else if (specifier == 'X')
@@ -52,7 +52,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1])
 		{
-			ft_format(args, format[i + 1]);
+			count += ft_format(args, format[i + 1]);
 			i++;
 		}
 		else
