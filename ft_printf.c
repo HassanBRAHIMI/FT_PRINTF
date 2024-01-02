@@ -12,9 +12,10 @@
 
 #include "printf.h"
 
-int ft_format(va_list args, char specifier)
+int	ft_format(va_list args, char specifier)
 {
 	int	count;
+	
 	count = 0;
 	if (specifier == 'c')
 		count += ft_putchar(va_arg(args, int));
@@ -32,7 +33,7 @@ int ft_format(va_list args, char specifier)
 		count += ft_putuhexa(va_arg(args, unsigned int));
 	else if (specifier == 'p')
 	{
-		
+		count += ft_putstr("0x");
 		count += ft_putadress(va_arg(args, unsigned long));
 	}
 	return (count);
@@ -54,48 +55,6 @@ int	ft_printf(const char *format, ...)
 			ft_format(args, format[i + 1]);
 			i++;
 		}
-		// {
-		// 	if (format[i + 1] == 'c')
-		// 	{
-		// 		count += ft_putchar(va_arg(args, int));
-		// 		i++;
-		// 	}
-		// 	else if (format[i + 1] == 's')
-		// 	{
-		// 		count += ft_putstr(va_arg(args, char *));
-		// 		i++;
-		// 	}
-		// 	else if (format[i + 1] == 'i' || format[i + 1] == 'd')
-		// 	{
-		// 		count += ft_putnbr(va_arg(args, int));
-		// 		i++;
-		// 	}
-		// 	else if (format[i + 1] == 'u')
-		// 	{
-		// 		count += ft_putunsigned(va_arg(args, unsigned int));
-		// 		i++;
-		// 	}
-		// 	else if (format[i + 1] == '%')
-		// 	{
-		// 		count += ft_putstr("%%");
-		// 		i++;
-		// 	}
-		// 	else if (format[i + 1] == 'x')
-		// 	{
-		// 		count += ft_putlhexa(va_arg(args, unsigned int));
-		// 		i++;
-		// 	}
-		// 	else if (format[i + 1] == 'X')
-		// 	{
-		// 		count += ft_putuhexa(va_arg(args, unsigned int));
-		// 		i++;
-		// 	}
-		// 	else if (format[i + 1] == 'p')
-		// 	{
-		// 		count += ft_putstr("0x");
-		// 		count += ft_putadress(va_arg(args, unsigned long));//u gotta handle 0x00
-		// 		i++;
-		// 	}
 		else
 			count += ft_putchar(format[i]);
 		i++;

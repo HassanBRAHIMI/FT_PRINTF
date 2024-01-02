@@ -19,7 +19,7 @@ int ft_putadress(unsigned long n)
 
 	count = 0;
 	if (!n)
-		count += ft_putstr("0x00");
+		count += ft_putstr("00");
 	else if (n < 16)
 		count += ft_putchar(hexa[n]);
 	else
