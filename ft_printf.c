@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: hbrahimi <hbrahimi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:43:14 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/01/02 20:55:17 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/01/09 13:31:33 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,29 +57,10 @@ int	ft_printf(const char *format, ...)
 			count += ft_format(args, format[i + 1]);
 			i++;
 		}
-		else
+		else if (format[i] != '%')
 			count += ft_putchar(format[i]);
 		i++;
 	}
 	va_end(args);
 	return (count);
 }
-
-/*int main() {
-    char c = 'A';
-    char *str = "Hello, World!";
-    int integer = 123;
-    unsigned int unsignedInteger = 456;
-    unsigned long pointerValue = (unsigned long)&main;
-
-    ft_printf("Character: %c\n", c);
-    ft_printf("Testing ft_printf:\n");
-    ft_printf("String: %s\n", str);
-    ft_printf("Integer: %d\n", integer);
-    ft_printf("Unsigned Integer: %u\n", unsignedInteger);
-    ft_printf("Hexadecimal (lowercase): %x\n", unsignedInteger);
-    ft_printf("Hexadecimal (uppercase): %X\n", unsignedInteger);
-    ft_printf("Address: %p\n", (void *)pointerValue);
-
-    return 0;
-}*/
