@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: hbrahimi <hbrahimi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:45:45 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/01/02 19:02:31 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/02/01 16:21:55 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdarg.h>
-
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_putnbr(int n);

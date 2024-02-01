@@ -21,11 +21,10 @@ CFLAGS = -Wall -Werror -Wextra
 
 NAME = libftprintf.a
 
-all : $(NAME)
+all : $(NAME) $(HEADER)
 
 $(NAME): $(OBJS) $(HEADER)
 	$(ARCHIVE) $(NAME) $(OBJS)
-
 
 clean:
 	$(RM) $(OBJS)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putunsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbrahimi <hbrahimi@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: hbrahimi <hbrahimi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:48:54 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/01/02 19:04:52 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/02/01 16:23:13 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,7 @@ int	ft_putunsigned(unsigned int u)
 		count += ft_putchar(u % 10 + '0');
 	return (count);
 }
+
+
+
+
