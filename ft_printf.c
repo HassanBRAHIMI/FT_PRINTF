@@ -6,7 +6,7 @@
 /*   By: hbrahimi <hbrahimi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:43:14 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/02/13 20:16:24 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/02/14 10:23:33 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-

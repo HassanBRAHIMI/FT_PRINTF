@@ -6,7 +6,7 @@
 /*   By: hbrahimi <hbrahimi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:48:54 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/02/01 16:23:13 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/02/14 10:24:29 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,3 @@ int	ft_putunsigned(unsigned int u)
 		count += ft_putchar(u % 10 + '0');
 	return (count);
 }
-
-
-
-
