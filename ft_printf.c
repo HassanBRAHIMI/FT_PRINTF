@@ -6,7 +6,7 @@
 /*   By: hbrahimi <hbrahimi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:43:14 by hbrahimi          #+#    #+#             */
-/*   Updated: 2024/02/14 10:23:33 by hbrahimi         ###   ########.fr       */
+/*   Updated: 2024/02/15 12:36:01 by hbrahimi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int	ft_format(va_list args, char specifier)
 		count += ft_putstr("0x");
 		count += ft_putadress(va_arg(args, unsigned long));
 	}
+	else
+		count += ft_putchar(specifier);
 	return (count);
 }
 
